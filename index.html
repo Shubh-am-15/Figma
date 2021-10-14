@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Figma </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesvideo.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="bodyContainer">
+        <!-- icon-bar displayed in mobile view -->
+        <div class="icon-bar">
+            <button class="tablinks" onclick="opentab(event, 'Dashboard')">
+                <span class="material-icons">
+                    dashboard</span>
+            </button>
+            <button class="tablinks" onclick="opentab(event, 'Video')">
+                <span class="material-icons">
+                    videocam</span>
+            </button>
+            <button class="tablinks" onclick="opentab(event, 'Library')">
+                <span class="material-icons">
+                    work</span>
+            </button>
+        </div>
+
+        <!-- side bar with all page buttons -->
+        <div class="sidebar">
+            <h1>VIDEO</h1>
+            <hr>
+            <div class="tab">
+                <button class="tablinks" onclick="opentab(event, 'Dashboard')">
+                    <span class="material-icons">
+                        dashboard</span>
+                    <span> Dashboard </span></button>
+                <button class="tablinks" onclick="opentab(event, 'Video')">
+                    <span class="material-icons">
+                        videocam</span>
+                    <span>Videos</span></button>
+                <button class="tablinks" onclick="opentab(event, 'Library')">
+                    <span class="material-icons">
+                        work</span>
+                    <span> Library</span></button>
+            </div>
+        </div>
+
+        <!-- contents of main body 3PARTS -->
+        <div class="contentwithnav">
+            <!-- Navbar common for all -->
+            <div class="dropdown">
+                <span class="navbarTitle"> Dashboard</span>
+                <button onclick="window.location.href='profile.html'" class="btn btn-light " type="button"
+                    id="dropdownMenuButton1" aria-expanded="false">
+                    <span class="material-icons">
+                        account_circle
+                    </span>
+                    <span>
+                        Profile
+                    </span>
+                </button>
+
+            </div>
+            <!-- Dashboard component -->
+            <div id="Dashboard" class="tablecontent">
+
+
+            </div>
+
+            <!-- Video component -->
+            <div id="Video" class="tablecontent">
+
+
+                <div class="form">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Search</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Video title">
+                    </div>
+                    <div class="mb-3">
+                        <div class="text">
+
+                            <h3>Edit a clip</h3>
+                            <p>you need to add a question to every clip and allow a user upto 3 options to chose from
+                            </p>
+                        </div>
+                        <label for="formGroupExampleInput2" class="form-label">Question</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2"
+                            placeholder="Enter your question here">
+
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Option</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
+                    <!-- Trigger/Open The Modal -->
+                    <button id="myBtn1" class="btn btn-primary m-3">Preview Video</button>
+                    <button id="myBtn2" class="btn btn-primary m-3">Video Flow</button>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" sanbox>
+                            </iframe>
+                            <button id="myBtn" class="btn-sm btn-primary m-3">Save as draft</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Library component -->
+            <div id="Library" class="tablecontent">
+
+                <div class="grid-container">
+                    <div id="0" class="grid-item">1</div>
+                    <div id="1" class="grid-item">2</div>
+                    <div id="2" class="grid-item">3</div>
+                    <div id="3" class="grid-item">4</div>
+                    <div id="4" class="grid-item">5</div>
+                    <div id="5" class="grid-item">6</div>
+                    <div id="6" class="grid-item">7</div>
+                    <div id="7" class="grid-item">8</div>
+                    <div id="8" class="grid-item">9</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
